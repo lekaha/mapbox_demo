@@ -1,0 +1,47 @@
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "27.0.3"
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 28
+    androidCompileSdkVersion = 28
+
+    //Libraries
+    kotlinVersion = "$kotlin_version"
+    googleApiVersion = '11.8.0'
+    mapboxVersion = "6.2.1"
+    mapboxLocationLayerVersion = "0.5.3"
+    androidMapsUtils = "0.5"
+    archLifecycle = '1.1.0'
+    ktxVersion = '0.3'
+    dispatchPermissionversion = '3.3.1'
+
+    mobileUiDependencies = [
+            mapbox                      :"com.mapbox.mapboxsdk:mapbox-android-sdk:${mapboxVersion}",
+            mapboxLocationLayer         :"com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:${mapboxLocationLayerVersion}",
+            googleLocation              :"com.google.android.gms:play-services-location:${googleApiVersion}",
+            googleMapUtils              :"com.google.maps.android:android-maps-utils:${androidMapsUtils}",
+            googlePlaces                :"com.google.android.gms:play-services-places:${googleApiVersion}",
+
+            // architecture component
+            archLifecycleRuntime        : "android.arch.lifecycle:runtime:${archLifecycle}",
+            archLifecycleExtensions     : "android.arch.lifecycle:extensions:${archLifecycle}",
+            archLifecycleReactiveStreams: "android.arch.lifecycle:reactivestreams:${archLifecycle}",
+            archLifecycleCompiler       : "android.arch.lifecycle:compiler:${archLifecycle}",
+
+            // KTX
+            ktx                         :"androidx.core:core-ktx:${ktxVersion}",
+
+            dispatchPermission          : "com.github.hotchemi:permissionsdispatcher:${dispatchPermissionversion}",
+            dispatchPermissionCompiler  : "com.github.hotchemi:permissionsdispatcher-processor:${dispatchPermissionversion}"
+
+    ]
+}

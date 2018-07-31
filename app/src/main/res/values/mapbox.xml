@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mb_accessToken" translatable="false">pk.eyJ1IjoibGVrYWhhIiwiYSI6ImNqaXpud3MzbzA5Mmszd2x6N25yeXhqemgifQ.k2CwfHx1g-pji9YRj9-aGw</string>
+    <!--<string name="mb_styleUrl">mapbox://styles/lekaha/cjiznx6jq0rtu2rrqap9n3jpv</string>-->
+    <string name="mb_styleUrl">mapbox://styles/lekaha/cjjhwu5ww9bgg2sovu1srkejy</string>
+</resources>
